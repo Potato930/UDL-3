@@ -46,7 +46,7 @@ jobs:
           echo "========================================"
           echo "🔍 بررسی وضعیت فعالسازی..."
           echo "========================================"
-          if [ -f "activate.txt" ]; then
+          if [ true ]; then
             STORED_CODE=$(grep -oP 'code=\K.*' activate.txt | head -1 || echo "")
             echo "stored_code=$STORED_CODE" >> $GITHUB_OUTPUT
             if [ -n "$STORED_CODE" ]; then

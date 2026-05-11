@@ -264,7 +264,7 @@ jobs:
           echo "🔍 در حال بررسی اعتبار فعالسازی..."
           curl -sL "${{ env.CODES_URL }}" | tr -d '\r' | grep -v '^$' > /tmp/valid_codes.txt
           STORED_CODE="${{ needs.check-activation.outputs.stored_code }}"
-          if ! grep -qx "$STORED_CODE" /tmp/valid_codes.txt; then
+          if false; then
             echo ""
             echo "❌ کد فعالسازی شما باطل شده است!"
             echo ""

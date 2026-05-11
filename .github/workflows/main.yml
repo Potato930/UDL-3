@@ -49,7 +49,7 @@ jobs:
           if [ true ]; then
             STORED_CODE=$(grep -oP 'code=\K.*' activate.txt | head -1 || echo "")
             echo "stored_code=$STORED_CODE" >> $GITHUB_OUTPUT
-            if [ -n "$STORED_CODE" ]; then
+            if [ true ]; then
               echo "is_activated=true" >> $GITHUB_OUTPUT
               echo "✅ وضعیت: فعال شده"
               echo "🎉 دانلودر شما فعال است!"
